@@ -15,9 +15,28 @@ const HomePage: React.FC = () => {
 
     return (
         <div>
-            <button onClick={onLogin}>Log in</button>
-            <button onClick={onSignUp}>Sign up</button>
+            <div>
+                <button onClick={onLogin}>Log in</button>
+                <button onClick={onSignUp}>Sign up</button>
+            </div>
+            <div>
+                
+            </div>
         </div>
+    );
+};
+
+const ResultTable: React.FC = ({ data }) => {
+    const content = data.map((item) => (<td>{item}</td>));
+    return (
+        <table>
+            <thead>Results</thead>
+            <tbody>
+                <tr>
+                    {content}
+                </tr>
+            </tbody>
+        </table>
     );
 };
 
